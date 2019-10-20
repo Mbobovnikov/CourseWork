@@ -17,12 +17,11 @@
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <StackPanel Orientation="Horizontal" Margin="2" Grid.ColumnSpan="3">
-            <Button Grid.Row="0"  HorizontalAlignment="Left" Margin="0,0,3,0"  >Добавить</Button>
-            <Button Grid.Row="0"  HorizontalAlignment="Left" Margin="0,0,3,0">Изменить</Button>
-            <Button Grid.Row="0"  HorizontalAlignment="Left" Margin="0,0,3,0">Просмотреть</Button>
-
-        </StackPanel>
+        <Menu Grid.ColumnSpan="3">
+            <MenuItem Header="Создать"></MenuItem>
+            <MenuItem Header="Удалить"></MenuItem>
+            <MenuItem Header="Изменить"></MenuItem>
+        </Menu>
         
     </Grid>
 </Window>
