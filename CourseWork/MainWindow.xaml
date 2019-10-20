@@ -22,6 +22,18 @@
             <MenuItem Header="Удалить"></MenuItem>
             <MenuItem Header="Изменить"></MenuItem>
         </Menu>
+        <DataGrid x:Name="rsistenGrid" Grid.Row="1" Grid.ColumnSpan="2" AutoGenerateColumns="False" RowBackground="Gray"
+                  AlternatingRowBackground="Wheat">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Фамилия "   />
+              
+                <DataGridTextColumn Header="Имя"  />
+                <DataGridTextColumn Header="Отчество "  />
+                <DataGridTextColumn Header="Пол "  />
+                <DataGridTextColumn Header="Возраст "   />
+                <DataGridTextColumn Header="Номер комнаты "  />
+            </DataGrid.Columns>
+        </DataGrid>
         
     </Grid>
 </Window>
