@@ -6,7 +6,23 @@
         xmlns:local="clr-namespace:CourseWork"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid ShowGridLines="True">
+        <Grid.RowDefinitions>
+            <RowDefinition MaxHeight="25"  ></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <StackPanel Orientation="Horizontal" Margin="2" Grid.ColumnSpan="3">
+            <Button Grid.Row="0"  HorizontalAlignment="Left" Margin="0,0,3,0"  >Добавить</Button>
+            <Button Grid.Row="0"  HorizontalAlignment="Left" Margin="0,0,3,0">Изменить</Button>
+            <Button Grid.Row="0"  HorizontalAlignment="Left" Margin="0,0,3,0">Просмотреть</Button>
+
+        </StackPanel>
         
     </Grid>
 </Window>
