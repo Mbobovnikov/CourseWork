@@ -8,7 +8,7 @@ using System.Runtime.CompilerServices;
 
 namespace CourseWork
 {
-    public class Resident //: INotifyPropertyChanged
+    public class Resident : INotifyPropertyChanged
     {
         private string FirstName;
         private string SecondName;
@@ -22,6 +22,7 @@ namespace CourseWork
         {
             get { return FirstName; }
             set { FirstName = value;
+                OnPropertyChanged("FirstName"); 
             }
         }
         public string Secondname
@@ -44,6 +45,11 @@ namespace CourseWork
             get { return AgeResident; }
             set { AgeResident = value; }
         }
-
+        public event PropertyChangedEventHandler PropertyChanged;
+        public void OnPropertyChanged([CallerMemberName]string prop = "")
+        {
+            if (PropertyChanged != null)
+                PropertyChanged(this, new PropertyChangedEventArgs(prop));
+        }
     }
 }

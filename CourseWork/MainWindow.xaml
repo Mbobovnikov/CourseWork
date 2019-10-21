@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:CourseWork"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid ShowGridLines="True">
+    <Grid ShowGridLines="False">
         <Grid.RowDefinitions>
             <RowDefinition MaxHeight="25"  ></RowDefinition>
             <RowDefinition></RowDefinition>
@@ -17,21 +17,22 @@
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <Menu Grid.ColumnSpan="3">
+        <Menu Grid.ColumnSpan="3" Margin="2">
             <MenuItem Header="Создать"></MenuItem>
             <MenuItem Header="Удалить"></MenuItem>
             <MenuItem Header="Изменить"></MenuItem>
         </Menu>
         <DataGrid x:Name="rsistenGrid" Grid.Row="1" Grid.ColumnSpan="2" AutoGenerateColumns="False" RowBackground="Gray"
-                  AlternatingRowBackground="Wheat">
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="Фамилия "   />
+                  AlternatingRowBackground="Wheat" Margin="3">
+            <DataGrid.Columns >
+                <DataGridTextColumn Header="Номер "  MinWidth="20" />
+                <DataGridTextColumn Header="Фамилия " MinWidth="40"  />
               
-                <DataGridTextColumn Header="Имя"  />
-                <DataGridTextColumn Header="Отчество "  />
-                <DataGridTextColumn Header="Пол "  />
-                <DataGridTextColumn Header="Возраст "   />
-                <DataGridTextColumn Header="Номер комнаты "  />
+                <DataGridTextColumn Header="Имя" MinWidth="30"  />
+                <DataGridTextColumn Header="Отчество "  MinWidth="40"/>
+            
+               
+                <DataGridTextColumn Header="Номер комнаты " MinWidth="20" />
             </DataGrid.Columns>
         </DataGrid>
         
