@@ -11,6 +11,7 @@
             <RowDefinition MaxHeight="25"  ></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
+            <RowDefinition MaxHeight="80"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
@@ -22,7 +23,7 @@
             <MenuItem Header="Удалить"></MenuItem>
             <MenuItem Header="Изменить"></MenuItem>
         </Menu>
-        <DataGrid x:Name="rsistenGrid" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" AutoGenerateColumns="False" RowBackground="Gray"
+        <DataGrid x:Name="rsistenGrid" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="2" AutoGenerateColumns="False" RowBackground="Gray"
                   AlternatingRowBackground="Wheat" Margin="3">
             <DataGrid.Columns >
                 <DataGridTextColumn Header="Номер "  MinWidth="20" />
@@ -33,15 +34,42 @@
             </DataGrid.Columns>
         </DataGrid>
         <StackPanel Grid.Row="1" Grid.Column="0" Margin="2" Grid.RowSpan="2">
-            <Image HorizontalAlignment="Center" MinHeight="100" MinWidth="100"></Image>
-            <Label>Имя</Label>
-            <TextBox  MinWidth="150" HorizontalAlignment="Stretch"></TextBox>
-            <Label>Фамилия</Label>
-            <TextBox  MinWidth="150" HorizontalAlignment="Stretch"></TextBox>
-            <Label>Отчество</Label>
-            <TextBox  MinWidth="150" HorizontalAlignment="Stretch"></TextBox>
-            <Label>Имя</Label>
-            <TextBox  MinWidth="150" HorizontalAlignment="Stretch"></TextBox>
+            <Label HorizontalAlignment="Center">Информация</Label>
+            <Grid ShowGridLines="True">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition MinWidth="90"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition MinHeight="80" ></RowDefinition>
+                    <RowDefinition MinHeight="200"></RowDefinition>
+                </Grid.RowDefinitions>
+               
+                <Image HorizontalAlignment="Center" MaxHeight="80" MaxWidth="60" Grid.Column="0"></Image>
+                <StackPanel Grid.Column="1">
+                    <Label>Фамилия</Label>
+                    <TextBox   HorizontalAlignment="Stretch"></TextBox>
+                    <Label >Имя</Label>
+                    <TextBox   HorizontalAlignment="Stretch" Grid.Column="1"></TextBox>
+                    <Label>Отчество</Label>
+                    <TextBox   HorizontalAlignment="Stretch"></TextBox>
+                </StackPanel>
+                <StackPanel Grid.Row="1" Grid.ColumnSpan="2">
+                    <WrapPanel>
+                        <Label>Возраст</Label>
+                        <TextBox   HorizontalAlignment="Stretch" MinWidth="50"></TextBox>
+                        <Label>Пол</Label>
+                        <ComboBox MinWidth="50">
+                            <ComboBoxItem>Мужской</ComboBoxItem>
+                            <ComboBoxItem>Женский</ComboBoxItem>
+                        </ComboBox>
+                    </WrapPanel>
+                    <Label HorizontalAlignment="Center">Информация о проживающем</Label>
+                    <TextBox   HorizontalAlignment="Stretch" MinWidth="50" MinHeight="100"></TextBox>
+                </StackPanel>
+                
+            </Grid>
+           
         </StackPanel>
         
     </Grid>
