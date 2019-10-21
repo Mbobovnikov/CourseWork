@@ -22,19 +22,27 @@
             <MenuItem Header="Удалить"></MenuItem>
             <MenuItem Header="Изменить"></MenuItem>
         </Menu>
-        <DataGrid x:Name="rsistenGrid" Grid.Row="1" Grid.ColumnSpan="2" AutoGenerateColumns="False" RowBackground="Gray"
+        <DataGrid x:Name="rsistenGrid" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" AutoGenerateColumns="False" RowBackground="Gray"
                   AlternatingRowBackground="Wheat" Margin="3">
             <DataGrid.Columns >
                 <DataGridTextColumn Header="Номер "  MinWidth="20" />
                 <DataGridTextColumn Header="Фамилия " MinWidth="40"  />
-              
                 <DataGridTextColumn Header="Имя" MinWidth="30"  />
                 <DataGridTextColumn Header="Отчество "  MinWidth="40"/>
-            
-               
                 <DataGridTextColumn Header="Номер комнаты " MinWidth="20" />
             </DataGrid.Columns>
         </DataGrid>
+        <StackPanel Grid.Row="1" Grid.Column="0" Margin="2" Grid.RowSpan="2">
+            <Image HorizontalAlignment="Center" MinHeight="100" MinWidth="100"></Image>
+            <Label>Имя</Label>
+            <TextBox  MinWidth="150" HorizontalAlignment="Stretch"></TextBox>
+            <Label>Фамилия</Label>
+            <TextBox  MinWidth="150" HorizontalAlignment="Stretch"></TextBox>
+            <Label>Отчество</Label>
+            <TextBox  MinWidth="150" HorizontalAlignment="Stretch"></TextBox>
+            <Label>Имя</Label>
+            <TextBox  MinWidth="150" HorizontalAlignment="Stretch"></TextBox>
+        </StackPanel>
         
     </Grid>
 </Window>
