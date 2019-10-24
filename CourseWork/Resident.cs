@@ -28,28 +28,38 @@ namespace CourseWork
         public string Secondname
         {
             get { return SecondName; }
-            set { SecondName = value; }
+            set { SecondName = value; OnPropertyChanged("SecondName"); }
+
         }
         public string Patronymicresident
         {
             get { return PatronymicResident; }
-            set { PatronymicResident = value; }
+            set { PatronymicResident = value; OnPropertyChanged("PatronymicResident"); }
         }
         public string Infomation
         {
             get { return InformationAboutResident; }
-            set { InformationAboutResident= value; }
+            set { InformationAboutResident= value; OnPropertyChanged("InformationAboutResident"); }
         }
          public int Ageresident
         {
             get { return AgeResident; }
-            set { AgeResident = value; }
+            set { AgeResident = value; OnPropertyChanged("AgeResident"); }
+        }
+        public int Roomnumber
+        {
+            get { return RoomNumber; }
+            set { RoomNumber = value; OnPropertyChanged("RoomNumber"); }
+        }
+        public bool Sexresident
+        {
+            get { return SexResident; }
+            set { SexResident = value; OnPropertyChanged("SexResident"); }
         }
         public event PropertyChangedEventHandler PropertyChanged;
         public void OnPropertyChanged([CallerMemberName]string prop = "")
         {
-            if (PropertyChanged != null)
-                PropertyChanged(this, new PropertyChangedEventArgs(prop));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(prop));
         }
     }
 }
